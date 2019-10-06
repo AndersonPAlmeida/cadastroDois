@@ -18,6 +18,7 @@ class CreateCategoriasTable extends Migration
             $table->string('nome');
             $table->timestamps();
         });
+        
     }
 
     /**
