@@ -23,6 +23,7 @@
     <div class="card-footer">
         <button class="btn btn-sm btn-primary" role="button" onclick="novoProduto()">Novo Produto</button>
         <button class="btn btn-sm btn-dark" id="mostrar" role="button" onclick="json()">JSON</button>
+        <button class="btn btn-sm btn-dark" id="mostrar" role="button" onclick="cor()">cor</button>
     </div>
 </div>
 
@@ -98,6 +99,11 @@ function novoProduto() {
     $('#precoProduto').val('');
     $('#quantidadeProduto').val('');
     $('#dlgProdutos').modal('show');
+}
+
+function cor() {
+    // $('#tabelaProdutos').addClass('red');
+    $('#tabelaProdutos').toggle();
 }
 
 function carregarCategorias() {

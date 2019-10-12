@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// use App\Mail;
 
 Route::get('/', function () {
     return view('index');
@@ -30,3 +31,5 @@ Route::get('/categorias/apagar/{id}', 'ControladorCategoria@destroy');
 Route::get('/categorias/editar/{id}', 'ControladorCategoria@edit');
 
 Route::post('/categorias/{id}', 'ControladorCategoria@update');
+
+Route::get('/enviar', 'ControladorEmail@index');
