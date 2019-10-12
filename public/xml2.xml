@@ -1,2 +1,2 @@
 <?xml version="1.0"?>
-<root><id>10</id><nome>Gtech</nome><estoque>1</estoque><preco>1</preco><categoria_id>3</categoria_id><created_at>2019-10-07 16:32:39</created_at><updated_at>2019-10-07 16:32:39</updated_at></root>
+<root><id>1</id><nome>PC e Not</nome><estoque>1</estoque><preco>1</preco><categoria_id>1</categoria_id><created_at>2019-10-12 03:36:36</created_at><updated_at>2019-10-12 03:36:36</updated_at></root>

@@ -17,6 +17,10 @@
             <li @if($current=="categorias") class="nav-item active" @else class="nav-item" @endif>
                 <a class="nav-link" href="/categorias">Categorias </a>
             </li> 
+
+            <li @if($current=="email") class="nav-item active" @else class="nav-item" @endif>
+                <a class="nav-link" href="/enviar">Enviar Email </a>
+            </li> 
         </ul>
     </div>
 </nav>

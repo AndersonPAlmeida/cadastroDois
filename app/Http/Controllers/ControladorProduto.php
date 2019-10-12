@@ -67,7 +67,7 @@ class ControladorProduto extends Controller
         $prod = Produto::find($id);
         
         if(isset($prod)){
-            file_put_contents('json2.json', $conve);
+            file_put_contents('json2.json', $prod);
             return json_encode($prod);            
         }
         return response('Produto não encontrado', 404);

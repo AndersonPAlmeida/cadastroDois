@@ -1,6 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('plugins/iziToast/iziToast.min.css') }}">
+        <script src="{{ asset('plugins/iziToast/iziToast.min.js') }}"></script>
         <title>Cadastro de Produtos</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <style>

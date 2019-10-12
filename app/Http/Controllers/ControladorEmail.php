@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Mail;
 use App\Mail\Enviarjson;
+use App\Mensagem;
 
 class ControladorEmail extends Controller
 {
@@ -14,10 +15,8 @@ class ControladorEmail extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $assunto = 'email';
-        Mail::to('andersonpa10pa@gmail.com')->send(new Enviarjson('teste de mensagem'));
-        return "certo";
+    {        
+        return view('enviaremail');
     }
 
     /**
@@ -27,7 +26,7 @@ class ControladorEmail extends Controller
      */
     public function create()
     {
-        //
+       //
     }
 
     /**
@@ -38,7 +37,15 @@ class ControladorEmail extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $msg = new Mensagem();
+
+        $msg->email = $request->input('email');
+        $msg->assunto = $request->input('assunto');
+        $msg->mensagem = $request->input('mensagem');
+        // $msg->save();
+
+        Mail::to($msg->email)->send(new Enviarjson($msg));
+        return response(200);
     }
 
     /**

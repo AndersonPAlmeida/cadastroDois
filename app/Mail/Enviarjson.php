@@ -6,19 +6,20 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Mensagem;
 
 class Enviarjson extends Mailable
 {
     use Queueable, SerializesModels;  
-    public $mensagem= '';
+    public $mensagem;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Public $mensagem)
+    public function __construct(Mensagem $msg)
     {
-        $this->mensagem= $mensagem;
+        $this->mensagem = $msg;
     }
 
     /**
@@ -27,8 +28,9 @@ class Enviarjson extends Mailable
      * @return $this
      */
     public function build()
-    {
+    {        
         return $this->from('to@email.com')
-                ->view('mail.treinaweb' , ['assunto'=>$mensagem])->subject('Teste');
+                ->view('mail.treinaweb' , ['assunto'=>$this->mensagem->mensagem])
+                ->subject($this->mensagem->assunto);
     }
 }

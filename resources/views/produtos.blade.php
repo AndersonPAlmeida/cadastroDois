@@ -23,7 +23,7 @@
     <div class="card-footer">
         <button class="btn btn-sm btn-primary" role="button" onclick="novoProduto()">Novo Produto</button>
         <button class="btn btn-sm btn-dark" id="mostrar" role="button" onclick="json()">JSON</button>
-        <button class="btn btn-sm btn-dark" id="mostrar" role="button" onclick="cor()">cor</button>
+        <button class="btn btn-sm btn-secondary" id="mostrar" role="button" onclick="mostesc()">Cor</button>
     </div>
 </div>
 
@@ -101,8 +101,7 @@ function novoProduto() {
     $('#dlgProdutos').modal('show');
 }
 
-function cor() {
-    // $('#tabelaProdutos').addClass('red');
+function mostesc() {    
     $('#tabelaProdutos').toggle();
 }
 

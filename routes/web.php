@@ -33,3 +33,5 @@ Route::get('/categorias/editar/{id}', 'ControladorCategoria@edit');
 Route::post('/categorias/{id}', 'ControladorCategoria@update');
 
 Route::get('/enviar', 'ControladorEmail@index');
+
+// Route::post('/enviando', 'ControladorEmail@create');

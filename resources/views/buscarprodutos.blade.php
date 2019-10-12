@@ -19,8 +19,7 @@
                 </div>
                 <div class="col-md-3">
                     <button type="button" class="btn btn-info" onclick="buscarProduto()">JSON</button>
-                    <button type="button" class="btn btn-warning" onclick="buscarXML()">XML</button>
-                    <button type="button" class="btn btn-warning"><a href="/enviar">Enviar</a></button>
+                    <button type="button" class="btn btn-warning" onclick="buscarXML()">XML</button>                    
                 </div>
             </div>
         </div>
