@@ -42,8 +42,7 @@ class ControladorEmail extends Controller
         $msg->email = $request->input('email');
         $msg->assunto = $request->input('assunto');
         $msg->mensagem = $request->input('mensagem');
-        // $msg->save();
-
+        
         Mail::to($msg->email)->send(new Enviarjson($msg));
         return response(200);
     }
